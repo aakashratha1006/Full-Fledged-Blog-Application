@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var expressSanitizer = require('express-sanitizer');
 var app = express();
+var Blog = require('./models/blog');
+var Comment = require('./models/comment');
+var User = require('./models/user');
 
 // App Config
 mongoose.connect("mongodb://localhost/full_fledged_blog_app");
@@ -12,23 +15,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride('_method'));
-
-// Mongoose/Model Config
-var blogSchema = new mongoose.Schema({
-    title : String,
-    image : String,
-    body: String,
-    created: {type: Date, default: Date.now}
-});
-
-var Blog = mongoose.model("Blog", blogSchema);
-
-/*Blog.create({
-    title: "Test blog 1",
-    image: "https://bsmedia.business-standard.com/_media/bs/img/article/2020-05/08/full/1588933553-9511.jpg",
-    body: "Hello this is a blog post......"
-});*/
-
 
 // RESTFUL ROUTES...
 
