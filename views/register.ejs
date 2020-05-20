@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Welcome to MyBlog</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">-->
+	    <!--<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -31,8 +31,8 @@
         <section id="header">
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
                     <div class="container">
-			<a class="px-3"><i class="fa fa-code fa-2x" aria-hidden="true"></i></a>
-			<a class="navbar-brand text-black font-weight-bold" href="#">Welcome to MyBlog</a>
+                        <a class="px-3"><i class="fa fa-code fa-2x" aria-hidden="true"></i></a>
+                        <a class="navbar-brand text-black font-weight-bold" href="#">Welcome to MyBlog</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -65,15 +65,41 @@
                 </nav>
         </section>
 
-        <section id="form">
-            <form action="/register" method="POST">
-                <input type="text" name="name" placeholder="Enter Name">
-                <input type="email" name="email" placeholder="Enter Email">
-                <input type="number" name="phone" placeholder="Enter Contact Number">
-                <input type="text" name="username" placeholder="Enter username">
-                <input type="password" name="password" placeholder="Enter password">
-                <button type="submit">Submit</button>
+        <section id="register" class="py-5">
+            <div class="container py-5">
+            <div class="card">
+            <div class="container py-5">
+                <center><h1 class="font-weight-light text-center py-3">Register</h1></center>
+            <form action="" method="POST" class="py-4">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputName" class="control-label requiredField">Full Name</label>
+                    <input type="text" class="form-control" placeholder="e.g : Rakesh">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputContact" class="control-label requiredField">Contact Number</label>
+                    <input type="number" class="form-control" placeholder="e.g : 90043277222">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail" class="control-label requiredField">Email</label>
+                  <input type="email" class="form-control" placeholder="e.g : abc123@gmail.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="username" class="control-label requiredField">Username</label>
+                        <input type="text" class="form-control" placeholder="e.g : abc123">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputCoordinates" class="control-label requiredField">Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>      
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            </div>
+            </div>
+            </div>
         </section>
 
         <!-- footer -->
