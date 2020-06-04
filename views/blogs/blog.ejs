@@ -39,6 +39,9 @@
                                 <a class="nav-link mr-4" href="/blogs/add_12345">Add</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link mr-4" href="#blog">Show</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link mr-4" href="#contact">Contact</a>
                             </li>
                             <% if(!currentUser){ %>
@@ -71,17 +74,11 @@
         <section id="blog">
             <div class="container py-5">
                 <% blogs.forEach(function(blog){ %>
-                <div class="card" id="card1">
-                    <div>
-                        <img id="img1" class="rounded mx-auto d-block" src="<%= blog.image %>">
-                        <div class="card-title">
-                            <h2 class="px-5 py-5"><%= blog.title %></h2>
-                        </div>
+                <div class="col-md-3 col-sm-6" id="card1">
+                    <div class="card">
+                        <img id="img1" class="card-img-top" src="<%= blog.image %>">
                         <div class="card-body">
-                            <span><%= blog.created.toDateString() %></span>
-                            <p><%= blog.description %>...</p>
-                        </div>
-                        <div class="card-footer">
+                            <h5 class="card-title"><%= blog.title %></h5>
                             <a href="/blogs/<%= blog._id %>" class="btn btn-primary rounded mx-auto">Read More</a>
                         </div>
                     </div>
